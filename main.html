@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joseph Caswell</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" />
+</head>
+<body>
+  <h1>Joseph Caswell</h1>
+  <div id="links">
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/joe-caswell/"><img src="Images/LinkedIn.svg" alt="LinkedIn" class="linkImages"></a>
+      </li>
+      <li>
+        <a href="https://github.com/fsujoseph"><img src="Images/Github.png" alt="Github" class="linkImages"></a>
+      </li>
+      <li>
+        <a href="Joseph_Caswell_Resume.pdf" download><img src="Images/resume.png" alt="Resume" class="linkImages"></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="galleryContainer">
+    <div class="slideShowContainer">
+      <div id="playPauseBtn" onclick="playPauseSlides()"></div>
+      <div class="leftArrow" onclick="plusSlides(-1)"><span class="arrow arrowLeft"></span> </div>
+      <div class="rightArrow" onclick="plusSlides(1)"><span class="arrow arrowRight"></span> </div>
+      <div class="captionHolder"><p class="captionText"></p></div>
+      <div class="imageHolder">
+        <img src="Images/purdue.jpeg" alt="">
+        <p class="captionText">Caption Text-01</p>
+      </div>
+      <div class="imageHolder">
+        <img src="Images/city.jpeg" alt="">
+        <p class="captionText">Caption Text-02</p>
+      </div>
+      <div class="imageHolder">
+        <img src="Images/beach.jpeg" alt="">
+        <p class="captionText">Caption Text-03</p>
+      </div>
+      <div class="imageHolder">
+        <img src="Images/venice.jpeg" alt="">
+        <p class="captionText">Caption Text-04</p>
+      </div>
+    </div>
+    <div id="dotsContainer"></div>
+  </div>
+  <p>Hello!</p>
+  <script src="main.js"></script>
+</body>
+</html>
