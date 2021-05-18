@@ -1,12 +1,9 @@
-var slideIndex, slides, dots, captionText;
+var slideIndex, slides, dots;
 
 function initGallery(){
   slideIndex = 0;
   slides = document.getElementsByClassName("imageHolder");
   slides[slideIndex].style.opacity = 1;
-
-  captionText = document.querySelector(".captionHolder .captionText");
-  captionText.innerText = slides[slideIndex].querySelector(".captionText").innerText;
 
   dots = [];
   var dotsContainer = document.getElementById("dotsContainer")
@@ -22,10 +19,21 @@ function initGallery(){
 
 initGallery();
 
+var timer= null;
+function setTimer(){
+  timer = setInterval(function(){
+    plusSlides(1);
+  }, 5000)
+}
+
+setTimer()
+
 function plusSlides(n){
   moveSlide(slideIndex + n);
-
 }
+
+document.getElementById("left").addEventListener("click", function(){plusSlides(-1)})
+document.getElementById("right").addEventListener("click", function(){plusSlides(1)})
 
 function moveSlide(n) {
   var i, current, next;
@@ -33,17 +41,14 @@ function moveSlide(n) {
     forCurrent: "",
     forNext: ""
   }
-  var slideTextAnimClass;
   if (n > slideIndex){
     if (n >= slides.length){n=0;}
     moveSlideAnimClass.forCurrent = "moveLeftCurrentSlide";
     moveSlideAnimClass.forNext = "moveLeftNextSlide";
-    slideTextAnimClass = "slideTextFromTop";
   }else if (n < slideIndex){
     if (n < 0) {n = slides.length - 1}
     moveSlideAnimClass.forCurrent = "moveRightCurrentSlide";
     moveSlideAnimClass.forNext = "moveRightNextSlide";
-    slideTextAnimClass = "slideTextFromBottom";
   }
   if (n !== slideIndex) {
     next = slides[n];
@@ -58,20 +63,7 @@ function moveSlide(n) {
     dots[n].classList.add("active");
     slideIndex = n;
   }
-  captionText.style.display = "none";
-  captionText.className = "captionText " + slideTextAnimClass;
-  captionText.innerText = slides[n].querySelector(".captionText").innerText;
-  captionText.style.display = "block";
 }
-
-var timer= null;
-function setTimer(){
-  timer = setInterval(function(){
-    plusSlides(1);
-  }, 6000)
-}
-
-setTimer()
 
 function playPauseSlides(){
   var playPauseBtn = document.getElementById("playPauseBtn")
