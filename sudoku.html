@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" />
+</head>
+<body>
+  <h1>Sudoku</h1>
+
+  <div class="menu">
+    <a href="main.html">Home</a>
+    <a href="sudoku.html">Sudoku</a>
+    <a href="translator.html">Translator</a>
+    <a href="stocks.html">Stock Tracker</a>
+    <a href="about.html">About Me</a>
+  </div>
+
+  <p class="description">
+    This project was made with the use of a backtracking algorithm. The algorithm attempts to go as far forward as
+    possible, then retreats when it hits a dead end to the last valid square and tries the next number. In this way
+    it 'probes' forward which drastically reduces the time complexity! However, it is still an NP-Complete problem and
+    has no efficient solution. The program also creates random boards with difficulty levels, which is something I
+    spent a lot of research on. It's hard for the computer to objectively say what is hard and not hard. Generally
+    the less amount of numbers you have in the beginning makes the puzzle harder, but that's not always the case
+    based on how they are laid out. Overall I enjoyed working on this project as I had to spend a lot of time
+    learning and researching things on my own about Sudoku.
+  </p>
+
+  <video width="500" height="500" controls>
+    <source src="Images/sudoku_video.webm" type="video/mp4">
+  </video>
+
+  <div class="links">
+      <a href="https://github.com/fsujoseph/Sudoku/tree/main"><img src="Images/Github.png" alt="Github" class="linkImages"></a>
+  </div>
+
+</body>
+</html>
