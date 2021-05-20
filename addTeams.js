@@ -3,7 +3,8 @@ function addTeams(team, index){
   labelValue.innerHTML = team;
   let inputValue = document.createElement('input');
   inputValue.type = "radio";
-  inputValue.name = 'group';
+  inputValue.name = 'Team:'
+  inputValue.value = team;
   let linebreak = document.createElement("br");
   document.querySelector(".scroll").appendChild(inputValue);
   document.querySelector(".scroll").appendChild(labelValue);
